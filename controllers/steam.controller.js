@@ -16,7 +16,7 @@ export async function getApps(req, res, next) {
 export async function getCachedApps(req, res, next) {
     try {
             
-            res.json({ status: "success", data: await steam.getDataByDepot(true) });
+            res.json(steam.getDataByDepot(true) );
         
     } catch (err) {
         console.error(`Error while getting data`, err.message);

@@ -4,9 +4,9 @@ export async function getServers(req, res, next) {
     try {
 
         if (req.query.service) {
-            res.json({ status: "success", data: await db.getDataByServers(req.query.id) });
+            res.json( db.getDataByServers(req.query.id) );
         } else {
-            res.json({ status: "success", data:  await db.getDataByServers() });
+            res.json(db.getDataByServers() );
         }
         
 
